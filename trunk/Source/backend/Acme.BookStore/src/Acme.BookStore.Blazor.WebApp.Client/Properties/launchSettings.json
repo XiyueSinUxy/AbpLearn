@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Acme.BookStore.Blazor.WebApp.Client": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:3165;http://localhost:3167"
+    }
+  }
+}
