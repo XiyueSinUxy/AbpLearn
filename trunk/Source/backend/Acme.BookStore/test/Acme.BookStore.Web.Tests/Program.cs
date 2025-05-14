@@ -3,9 +3,7 @@ using Acme.BookStore;
 using Volo.Abp.AspNetCore.TestBase;
 
 var builder = WebApplication.CreateBuilder();
-
-builder.Environment.ContentRootPath = GetWebProjectContentRootPathHelper.Get("Acme.BookStore.Web.csproj");
-await builder.RunAbpModuleAsync<BookStoreWebTestModule>(applicationName: "Acme.BookStore.Web" );
+await builder.RunAbpModuleAsync<BookStoreWebTestModule>();
 
 public partial class Program
 {

@@ -92,7 +92,7 @@ public class OpenIddictDataSeedContributor : IDataSeedContributor, ITransientDep
                 type: OpenIddictConstants.ClientTypes.Confidential,
                 consentType: OpenIddictConstants.ConsentTypes.Implicit,
                 displayName: "Web Application",
-                secret: configurationSection["BookStore_Web:ClientSecret"] ?? "Aa123456",
+                secret: configurationSection["BookStore_Web:ClientSecret"] ?? "1q2w3e*",
                 grantTypes: new List<string> //Hybrid flow
                 {
                     OpenIddictConstants.GrantTypes.AuthorizationCode, OpenIddictConstants.GrantTypes.Implicit
@@ -181,7 +181,7 @@ public class OpenIddictDataSeedContributor : IDataSeedContributor, ITransientDep
 
         if (!redirectUri.IsNullOrWhiteSpace() || !postLogoutRedirectUri.IsNullOrWhiteSpace())
         {
-            application.Permissions.Add(OpenIddictConstants.Permissions.Endpoints.EndSession);
+            application.Permissions.Add(OpenIddictConstants.Permissions.Endpoints.Logout);
         }
 
         var buildInGrantTypes = new[] {
@@ -238,7 +238,7 @@ public class OpenIddictDataSeedContributor : IDataSeedContributor, ITransientDep
             if (grantType == OpenIddictConstants.GrantTypes.DeviceCode)
             {
                 application.Permissions.Add(OpenIddictConstants.Permissions.GrantTypes.DeviceCode);
-                application.Permissions.Add(OpenIddictConstants.Permissions.Endpoints.DeviceAuthorization);
+                application.Permissions.Add(OpenIddictConstants.Permissions.Endpoints.Device);
             }
 
             if (grantType == OpenIddictConstants.GrantTypes.Implicit)

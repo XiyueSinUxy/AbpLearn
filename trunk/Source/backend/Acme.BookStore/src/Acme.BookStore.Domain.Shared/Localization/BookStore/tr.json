@@ -1,7 +1,6 @@
 {
   "culture": "tr",
   "texts": {
-    "AppName": "BookStore",
     "Menu:Home": "Ana sayfa",
     "Welcome": "Hoşgeldiniz",
     "LongWelcomeMessage": "Uygulamaya hoşgeldiniz. Bu, ABP framework'ü üzerine bina edilmiş bir başlangıç projesidir. Daha fazla bilgi için abp.io adresini ziyaret edebilirsiniz."

@@ -1,4 +1,3 @@
-using System;
 using System.IO;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Extensions.DependencyInjection;
@@ -94,7 +93,7 @@ public class BookStoreWebModule : AbpModule
 
             PreConfigure<OpenIddictServerBuilder>(serverBuilder =>
             {
-                serverBuilder.AddProductionEncryptionAndSigningCertificate("openiddict.pfx", "a916596f-531b-43a8-bec8-8ac08ecee595");
+                serverBuilder.AddProductionEncryptionAndSigningCertificate("openiddict.pfx", "84d3b206-2978-46ca-b920-8429e6fc21b0");
             });
         }
     }
@@ -214,7 +213,7 @@ public class BookStoreWebModule : AbpModule
         }
 
         app.UseCorrelationId();
-        app.MapAbpStaticAssets();
+        app.UseStaticFiles();
         app.UseRouting();
         app.UseAuthentication();
         app.UseAbpOpenIddictValidation();
